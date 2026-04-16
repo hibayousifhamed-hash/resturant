@@ -1,0 +1,327 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    
+}
+:root{
+    --main-color:#EEBF00;
+}
+
+   
+header h1{
+   
+}
+
+header nav{
+    position: fixed;
+    top: 0;
+    width: 100%;
+     display: flex;
+    justify-content: space-between;
+    align-items: center;
+     padding: 10px 50px;
+    background-color: var(--main-color);
+ box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;  
+
+}
+ nav ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    direction: rtl;
+
+}
+ nav ul li{
+    list-style: none;
+}
+ nav ul li a{
+    text-decoration: none;
+    color: #000;
+    font-size: 18px;
+    font-weight: 600;
+     padding: 12px 20px;
+    display: block;
+    transition: 0.5s;
+}
+ nav ul li a:hover{
+    background-color: #fff;
+    color: var(--main-color);
+    cursor: pointer;
+   
+ }
+
+
+
+ /*  */
+ .menu-btn{
+        font-size: 25px;
+        background: none;
+        border: none;
+        display: none;
+        padding: 15px;
+         
+    }
+    .side-menu{
+         /* display: flex;
+        flex-direction: column; */
+        position: fixed;
+        top: 0;
+        /* left: -250px; */
+        display: none;
+        width: 250px;
+        height: 100%;
+        background-color: #212529;
+        padding-top: 60px;
+        
+       
+
+    }
+    .side-menu a{
+        text-decoration: none;
+        color: var(--main-color);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 15px;
+        border-bottom: 1px var(--main-color) solid;
+    }
+    .close-btn{
+        position: absolute;
+        top: 10px;
+        left: 15px;
+        font-size: 25px;
+        border: none;
+        background-color:#212529;
+        cursor: pointer;
+        color: var(--main-color);
+    }
+ @media (max-width:768px) {
+    header nav ul{
+        display: none;
+    }
+    .menu-btn{
+        font-size: 20px;
+        display: block;
+        position: absolute;
+        right: 10%;
+        cursor: pointer;
+        background: none;
+        border: none;
+        padding: 15px;
+         
+    }
+    .side-menu{
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    overflow: hidden;
+
+    right: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    padding-top: 60px;
+    transition: 0.5s;
+    display: flex;
+    flex-direction: column;
+    z-index: 999;
+    display: block;
+    }
+    .side-menu.active{
+    right: 0;
+ }
+ .side-menu a{
+    text-decoration: none;
+    padding: 15px;
+    color: var(--main-color);
+    transition: 0.5s;
+ }
+ .side-menu a:hover{
+    background-color:var(--main-color);
+    color: #fff;
+
+    transform: scale(1.1);
+    
+ }
+ .close-btn{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: none;
+    border: none;
+    font-size: 25px;
+    cursor: pointer;
+    color:var(--main-color);
+    transition: 0.5s;
+ }
+ .close-btn:hover{
+    color: #fff;
+ }
+ }
+ /*  */
+
+
+ /*start hero */
+ .hero{
+    height:80vh ;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-image: url(./images/hero.png);
+    background-size: cover;
+    background-position: bottom;
+    direction: rtl;
+ }
+ .hero .logo{
+    width: 300px;
+    /* margin-top: 3rem; */
+    animation: straw 2s linear alternate infinite;
+ }
+ @keyframes straw {
+     100%{
+        transform: translateY(-15px);
+    }
+ }
+ .hero .detiles-hero{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+ }
+ 
+ .hero .detiles-hero h3{
+color: #212529;
+ }
+ .hero .detiles-hero p{
+   font-weight: 600;
+   color:#212529;
+ }
+ .hero .detiles-hero button {
+    
+    padding: 8px ;
+    width: 80px;
+    text-decoration: none;
+    background-color: var(--main-color);
+    border: 1px var(--main-color) solid;
+    border-radius: 20px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.5s;
+   
+ }
+ .hero .detiles-hero button:hover{
+    background-color: #fff;
+    color: var(--main-color);
+ }
+
+ @media (max-width:768px) {
+    .hero .detiles-hero button {
+        margin-right: 9rem;
+    }
+    .hero{
+         height:90vh ;
+        display: flex;
+        flex-direction: column;
+       
+    }
+    .detiles-hero{
+        padding-top:5rem ;
+        text-align: center;
+    }
+    .hero .logo{
+    width:150px;
+    /* margin-top: 3rem; */
+    animation: straw 2s linear alternate infinite;
+    margin-left: 60%;
+ }
+ @keyframes straw {
+     100%{
+        transform: translateY(-15px);
+    }
+ }
+    
+ }
+ 
+ /*end hero */
+
+
+
+ /* start products */
+.products{
+text-align: center;
+margin-top: 4rem;
+}
+.products h2{
+    margin-bottom: 2rem;
+   
+}
+.products .container{
+    /* padding: 0 100px; */
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+}
+.products .container .card{
+    
+    
+    width: 20rem;
+    border: 1px var(--main-color) solid;
+    margin-left: 2%;
+    margin-bottom: 2%;
+    border-radius: 20px;
+    padding: 10px;
+    transition: 0.5s;
+    
+}
+.products .container .card:hover{
+background-blend-mode: overlay;
+    background-color: rgba(0, 0, 0, 0.6);
+    opacity: 1;
+    top: 10%;
+}
+
+
+
+.products .container .card .detels-product{
+    
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.products .container .card .detels-product p{
+    font-weight: 600;
+}
+.products .container .card .detels-product span{
+    color: var(--main-color);
+    cursor: pointer;
+}
+.products .container .card .detels-product button{
+    width: 80px;
+   margin-left: 35%;
+   background-color: var(--main-color);
+   color: #fff;
+   cursor: pointer;
+   border-radius: 20px;
+   border: none;
+   padding: 3px;
+   transition: 0.5s;
+}
+.products .container .card .detels-product button:hover{
+    background-color:#212529;
+    color: var(--main-color);
+}
+ /* end products */
+
+
+ footer{
+    background-color: var(--main-color);
+    color: #000;
+    font-weight: 600;
+    text-align: center;
+    padding: 20px 0;
+ }
